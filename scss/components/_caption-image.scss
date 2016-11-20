@@ -1,0 +1,61 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Caption Image
+// This element shows up in the WYSIWYG when you float things right or left
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+
+$CaptionMargin: 45px;
+$CaptionImage-bp: $mq-sm;
+
+.caption-image {
+    margin: $CaptionMargin 0;
+    position: relative;
+
+    &__caption {
+        //@include text-sm;
+        margin-top: 20px;
+    }
+}
+
+
+
+/////////////////////////////////////-+++-
+// Classes to float the image right of left and apply appropriate spacing
+//
+
+.caption-image-left,
+.caption-image-right {
+    position: relative;
+
+    @include mq($from: $CaptionImage-bp) {
+        max-width: 50%;
+        margin-bottom: $CaptionMargin;
+    }
+
+    @include mq($from: 1250px) {
+        max-width: 469px;
+    }
+
+    // text alignment is centered, because sometimes images are cropped in a circle
+    .caption-image__caption {
+        text-align: center;
+    }
+}
+
+.caption-image-right {
+
+    @include mq($from: $CaptionImage-bp) {
+        float: right;
+        margin-left: $CaptionMargin;
+    }
+}
+
+.caption-image-left {
+
+    @include mq($from: $CaptionImage-bp) {
+        float: left;
+        margin-right: $CaptionMargin;
+    }
+}

@@ -1,0 +1,42 @@
+<header class="header" role="banner">
+
+<div class="header__not-rail">
+
+    <div id="mobile-area" >
+        <button id="mobile-trigger" class="mobile-trigger button" aria-controls="mobile-area-offcanvas" type="button">
+            <span>Menu</span>
+            <span class="button__icon hamburger">
+                <span></span>
+            </span>
+        </button><!--/#mobile-trigger-->
+        <div id="mobile-area-1__inside">
+        </div><!--/#mobile-area-1__inside-->
+    </div><!--/#mobile-area-1-->
+
+
+    {% include "components-header-social" %}
+
+
+    <div class="logo">
+        <a href="/">
+            <img src="../../../../img/aspcapro.svg" alt="ASPCApro" />
+        </a>
+    </div><!--/.logo-->
+
+    {% include "components-primary-nav" %}
+
+    {% include "components-header-newsletter" %}
+
+</header><!-- /.header -->
+
+
+<div id="mobile-area-offcanvas" class="overlay" aria-hidden="true" role="dialog" aria-label="Mobile Menu">
+    <div class="overlay__cover"></div>
+    <div class="overlay__content">
+    </div>
+
+    <button id="offcanvas-close" class="offcanvas__modal-close overlay__close" type="button" aria-label="Close Dialog">
+        <span class="sr-only">Close</span>
+        <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><title>Close</title><g fill="#fff" fill-rule="evenodd"><path d="M86.368 90a3.622 3.622 0 0 1-2.568-1.064L1.063 6.2A3.632 3.632 0 1 1 6.2 1.064L88.937 83.8a3.63 3.63 0 0 1-2.569 6.2z"/><path d="M3.632 90a3.63 3.63 0 0 1-2.568-6.2L83.8 1.063a3.632 3.632 0 1 1 5.137 5.136L6.2 88.936A3.618 3.618 0 0 1 3.632 90z"/></g></svg>
+    </button>
+</div>

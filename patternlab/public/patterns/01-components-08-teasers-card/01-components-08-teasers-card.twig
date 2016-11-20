@@ -1,0 +1,28 @@
+<article class="card {{ post.tagclass }}">
+  test: {{ test }}
+    <a href="#" class="">
+        <div class="card__img">
+          <img src="{{ post.img.src }}" alt="{{ post.img.alt }}" />
+        </div>  
+
+        <div class="card__text">
+          {% if post.tag %}
+              <div class="card__tag-wrap">
+                <div class="card__tag text-s2 tagbg">{{ post.tag }}</div>
+              </div>
+          {% endif %}
+
+          <div class="card__text-box box-s">
+
+            {% block card_title %}
+                <h3 class="card__title text-link strong text-2 mb-0">{{ post.title }}</h3>
+            {% endblock %}
+
+            {% if post.excerpt %}
+                <p class="card__excerpt blackborder text-s1 text">{{ post.excerpt }}</p>
+            {% endif %}
+          </div><!--/.card__text-box-->
+        </div><!--/.card__text-->
+
+    </a>
+</article><!--/.card-->

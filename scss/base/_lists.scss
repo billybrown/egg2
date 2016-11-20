@@ -1,0 +1,133 @@
+/////////////////////////////////////-+++-
+// Lists - stacks
+//
+
+.stack {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li:not(:last-child),
+    > div:not(:last-child) {
+        margin-bottom: $space-2;
+    }
+}
+
+// @for $i from 0 through 8 {
+//     .list-#{$i} {
+//         & > div {
+//             display: inline-block;
+//             vertical-align: top;
+//             &:not(:last-child) {
+//                 margin-right: $ms-space-px * $i;
+//             }
+//         }
+//     }
+// }
+
+.list-s {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+    & > div,
+    & > li {
+       display: inline-block;
+       vertical-align: top;
+       &:not(:last-child) {
+           margin-right: $space-0;
+       }
+    }      
+}
+
+.list-m {
+    & > div {
+       display: inline-block;
+       vertical-align: top;
+       &:not(:last-child) {
+           margin-right: $space-4;
+       }
+    }      
+}
+
+.list-l {
+    & > div {
+       display: inline-block;
+       vertical-align: top;
+       &:not(:last-child) {
+           margin-right: $space-7;
+       }
+    }   
+}
+
+.pipelist {
+    & > h2,
+    & > a,
+    & > div {
+        display: inline-block;
+        vertical-align: middle;
+
+        &:not(:last-child) {
+            margin-right: $space-1 + $space-s1;
+
+            &:after {
+                content: '';
+                width: 2px;
+                height: 28px;
+                background: $gray;
+                display: inline-block;
+                vertical-align: top;
+                margin-left: $space-2;
+            }
+        }
+    }
+}
+
+.pipelist-s {
+    & > a,
+    & > div {
+        display: inline-block;
+        vertical-align: middle;
+
+        &:not(:last-child) {
+            margin-right: $space-0 + $space-s1;
+
+            &:after {
+                content: '';
+                width: 2px;
+                height: 28px;
+                background: $gray-dark;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: $space-1;
+            }
+        }
+    }
+}
+
+// .brandlist {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   > li {
+//     position: relative;
+//     padding-left: $space-1;
+
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       top: 50%;
+//       left: 0;
+//       width: 6px;
+//       height: 6px;
+//       border-radius: 50%;
+//       background: $orange;
+//       transform: translatey(-50%);
+//     }
+
+//     &:not(:last-child) {
+//       margin-bottom: $space-0;
+//     }
+//   }
+// }
+

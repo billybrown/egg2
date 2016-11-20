@@ -1,0 +1,11 @@
+<nav id="primary-nav" role="navigation" aria-label="Main menu" class="primary-nav">
+    <ul>
+        {% for post in primarynav %}
+            {% if post.title != null %}
+                <li class="{% if post.active == "true" or page.primaryactive == post.title %}menu-item--active menu-item--active-trail{% endif %}" >
+                    <a class="{% if post.active == "true" or page.primaryactive == post.title %}is-active{% endif %}" href="/">{{ post.title|raw }}</a>
+                </li>
+            {% endif %}
+        {% endfor %} 
+    </ul>
+</nav><!--/.PrimaryNav-->

@@ -1,0 +1,47 @@
+@mixin centered {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    @include centered;
+    max-width: 1100px;
+}
+
+.container-s {
+    @include centered;
+    max-width: 66.666%;
+}
+
+.frame {
+    padding: $space-5 $space-5 $space-8;
+
+    &__inside {
+        @include centered;
+        max-width: 1100px;
+
+        > div,
+        > article,
+        > section {
+
+            &:not(:first-child) {
+                margin-top: $space-6;
+            }
+        }
+    }
+ 
+    &--small {
+        padding-bottom: $space-5;
+    }
+}
+
+
+.box-l { padding: $space-4; }
+.box { padding: $space-3; }
+.box-s { padding: $space-2; }
+
+
+
+
+

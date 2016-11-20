@@ -1,0 +1,193 @@
+// typography
+
+
+// modular scale typography
+$ms-base: 16px;
+$ms-ratio: 1.25;
+$font-steps-up: 6;
+$font-steps-down: 2; 
+$line-height: 1.6;
+
+
+
+@mixin type($size) {
+    font-size: pow($ms-ratio, $size) * 1em;
+}
+
+@mixin type-s($size) {
+    font-size: 1em / pow($ms-ratio, $size);
+}
+
+// modular scale!
+@for $i from 0 through $font-steps-up {
+    .text-#{$i} {
+        font-size: pow($ms-ratio, $i) * 1em;
+    }
+}
+// modular scale small
+@for $i from 1 through $font-steps-down {
+    .text-s#{$i} {
+        font-size: 1em / pow($ms-ratio, $i);
+    }
+}
+
+// default text
+@mixin text {
+    line-height: $line-height;
+    color: $text;
+    font-family: $sans-serif;
+    font-weight: $sans-weight-medium;
+    font-size: $ms-base;
+}
+
+body {
+    @include text; 
+}
+
+
+// line height adjustments @todo - watch this and see if it can be dynamically
+// included into the modular scale styles above
+.text-s2 { line-height: 1.4; }
+
+.text-1 { line-height: 1.2; }
+
+.text-2 { line-height: 1.1; }
+
+.text-3 { line-height: 1.1; }
+
+
+
+// buttons
+$button-color: tomato;
+
+@mixin button-defaults {
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-weight: $sans-weight-bold;
+    //background: $navy;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: $space-1 * .85 $space-5 $space-1 * .85 $space-1;
+    transition: background $animation, color $animation;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+.button {
+    @include button-defaults;
+    font-size: 1em / pow($ms-ratio, 2);
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+
+    &.block {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    &:hover,
+    &:focus {
+        //background: lighten($navy, 5%);
+        color: $white;
+    }
+
+    &.transparent {
+        background: transparent;
+        //color: $navy-light;
+        text-transform: none;
+        letter-spacing: normal;
+        padding: 0 $space-3 0 0;
+        box-shadow: none;
+        font-size: 1em / pow($ms-ratio, 1);
+
+        &:before {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            //color: $blue;
+        }
+    }
+}
+
+.button-lg {
+    @include button-defaults;
+    font-size: 19px;
+    letter-spacing: 4.07px;
+    padding-left: 9px;
+}
+
+.text-link {
+    color: black;
+    transition: color $animation;
+
+    &:hover {
+        //color: $blue;
+    }
+}
+
+
+/////////////////////////////////////-+++-
+// Implementations of some typestyles to html elements
+//
+
+// h1 { @include title-xlg; }
+// h2 { @include title-lg; }
+// h3 { @include title; }
+// h4 { @include title-sm; }
+// h5 { @include title-xsm; }
+// h6 { @include title-xxsm; }
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: $sans-weight-medium;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+// special font styles
+.tag {
+    font-weight: $sans-weight-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+// some utility classes
+b,
+strong {
+  font-weight: $sans-weight-bold;
+}
+
+.strong { font-weight: $sans-weight-bold; }
+.medium { font-weight: $sans-weight-medium; }
+
+.center { text-align: center; }
+.left { text-align: left; }
+.right { text-align: right; }
+
+.condensed { line-height: 1.2; }
+
+
+// prints out utility classes based on colors in the $color-list definied in variables.scss
+// ie: .red and .bg-red
+@each $color, $hex in $color-list {
+
+    .#{$color} {
+        color: $hex;
+    }
+
+    .bg-#{$color} {
+        background-color: $hex;
+    }
+}

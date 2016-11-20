@@ -1,0 +1,57 @@
+<main role="main" class="post {{ page.color }}">
+
+    <div class="post__content">
+
+        {% if page.type == "stack" %}
+          <div class="stack-wrapper">
+            {% for post in post.list %}
+                <div class="stack__item">
+                    {% include "components-teaser" %}
+                </div>
+            {% endfor %}
+            {% if post.pagination %}
+                {% include "components-pagination" %}
+            {% endif %}
+          </div>
+        
+        {% elseif page.type == "search" %}
+            <ul class="border-stack">
+                {% for post in post.list %}
+                    <li>
+                        {% include "components-teaser" %}
+                    </li>
+                {% endfor %}
+            </ul>
+            {% include "components-pagination" %}
+        {% elseif page.type == "landing" %}
+
+            <ul class="border-stack">
+              {% for post in post.list %}
+                  <li>
+                    {% include "components-teaser" %}
+                  </li>
+              {% endfor %}
+            </ul>
+
+        {% else %}
+
+            {% if post.portrait %}
+                <div class="post__portrait">
+                    <img src="{{ post.portrait.src }}" alt="{{ post.portrait.alt }}" />
+                </div>
+            {% endif %}
+
+            <div class="WYSIWYG container-md">
+                {% block body %}
+                    {% include 'components-article-wysiwyg' %}
+                {% endblock %}
+            </div>
+
+            <div class="post__footer">
+                {{ post.footer|raw }}
+            </div>
+
+        {% endif %}
+
+    </div><!--/.post__content-->
+</main>

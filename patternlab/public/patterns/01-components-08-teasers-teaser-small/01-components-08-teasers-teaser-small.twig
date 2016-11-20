@@ -1,0 +1,17 @@
+<div class="teaser-small">
+    <a href="#" class="">
+        <div class="teaser-small__img">
+          <img src="{{post.img.src}}" alt="{{post.img.alt}}" />
+        </div>
+
+        <div class="teaser-small__text">
+          {% if post.tag %}
+              <div class="teaser-small__tag tag text-s2 blue mb-0">{{ post.tag }}</div>
+          {% endif %}
+
+          {% block teaser_title %}
+              <h3 class="teaser-small__title white text-1">{{ post.title }}</h3>
+          {% endblock %}
+        </div>
+    </a>
+</div><!--/.teaser-small-->

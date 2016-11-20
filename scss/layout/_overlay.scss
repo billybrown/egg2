@@ -1,0 +1,92 @@
+// overlay
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: 1000;
+    visibility: hidden;
+    transition: opacity .4s ease, visibility .4s ease;
+
+    &.js-show {
+        display: block;
+    }
+
+    &.js-visual-show {
+        opacity: 1;
+        visibility: visible;
+
+        .overlay__content {
+            transform: translatey(0);
+        }
+    }
+
+    &__cover {
+        width: 100vw;
+        height: 100vh;
+        //background: rgba(128, 0, 0, .95);
+        background: rgba(56, 124, 149, .95);
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1001;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translatey(-1em);
+        transition: transform .4s ease;
+        padding: 1.8em * 2 1.8em;
+        max-width: 430px;
+
+        @include mq($from: $mq-sm) {
+            max-width: $container-xssm;
+            margin-top: 2em;
+            
+        }
+
+        @include mq($from: $mq-md) {
+            margin-top: 10em;
+        }
+
+    }
+
+    &__close {
+        position: fixed;
+        z-index: 1002;
+        width: 38px;
+        height: 32px;
+        top: 10px;
+        right: 10px;
+
+        @include mq($from: $mq-sm) {
+            top: 20px;
+            right: 20px;
+        }
+
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+
+        path {
+            transition: fill $animation;
+        }
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            path {
+                fill: tomato;
+            }
+        }
+    }
+}

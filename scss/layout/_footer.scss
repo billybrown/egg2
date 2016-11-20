@@ -1,0 +1,116 @@
+
+.footer {
+
+    &__emergency {
+        margin-top: $space-5;
+        &:before {
+            content: '';
+            width: 48px;
+            height: 48px;
+            background: url('../img/emergency.svg') no-repeat center center;
+            display: block;
+            margin-bottom: $space-0;
+        }
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    &__info {
+        margin-top: -40px;
+        margin-bottom: $space-4;
+        width: 100%;
+        margin-right: 25%;
+
+        > div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -.25em;
+            width: 33.333%;
+        }
+
+    }
+
+    &__meta {
+        a {
+            color: $white;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    &__navs {
+        .footer-nav-1 > ul > li {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -.25em;
+            width: 33.333%;
+        }
+
+        .footer-nav-1 {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -.25em;
+            width: 75%;            
+        }
+
+        .footer__last-column {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: -.25em;
+            width: 25%;            
+        }
+    }
+}
+
+.footer-nav-1,
+.footer-nav-2 {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: block;
+        color: $white;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    > ul > li {
+        > a {
+            font-weight: $sans-weight-bold;
+            font-size: 1em / pow($ms-ratio, 1);
+        }
+    }
+}
+
+.footer-nav-1 {
+
+    > ul > li > ul {
+        margin-top: $space-1;        
+    }
+
+    > ul > li > ul > li {
+        margin-bottom: $space-0 + $space-s1;
+        > a {
+            font-size: 1em / pow($ms-ratio, 2);
+        }
+    }
+}
+
+.footer-nav-2 {
+    a {
+        display: block;
+    }
+
+    > ul > li {
+        margin-bottom: $space-2;
+    }
+}

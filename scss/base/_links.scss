@@ -1,0 +1,22 @@
+a {
+    //color: $orange;
+    text-decoration: none;
+    transition: color $animation;
+
+    &:hover,
+    &:focus {
+        //color: $blue;
+
+        path {
+            //fill: $blue;
+        }
+    }
+
+    path {
+        transition: fill $animation;
+    }
+}
+
+::selection {
+    //background: rgba(231, 111, 0, .4);
+}

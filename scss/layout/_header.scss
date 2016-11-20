@@ -1,0 +1,36 @@
+$rail: 225px;
+$header-top: 172px;
+
+.header {
+    background: transparent;
+}
+
+
+.primary-nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+#bypass-link-main {
+    background: tomato;
+    color: $white;
+    padding: $space-1 $space-2;
+    display: inline-block;
+    font-weight: $sans-weight-bold;
+    position: absolute;
+    transition: transform $animation;
+    transform: translatey(-100%);
+    z-index: 100;
+
+    &:focus {
+        transform: translatey(0);
+    }
+}
+
+#mobile-area {
+    display: none; // temp
+}

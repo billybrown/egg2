@@ -1,0 +1,36 @@
+{
+    "colors": [
+        {
+            "name" : "black",
+            "hex" : "#000"
+        },
+        {
+            "name" : "white",
+            "hex" : "#fff"
+        },
+        {
+            "name" : "text",
+            "hex" : "#363636"
+        },
+        {
+            "name" : "gray",
+            "hex" : "#E8E8E2"
+        },
+        {
+            "name" : "navy",
+            "hex" : "#1F4359"
+        },
+        {
+            "name" : "orange",
+            "hex" : "#FF671A"
+        },
+        {
+            "name" : "blue",
+            "hex" : "#79BDE8"
+        },
+        {
+            "name" : "green",
+            "hex" : "#8DC63F"
+        }
+    ]
+}

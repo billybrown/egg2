@@ -1,0 +1,127 @@
+/////////////////////////////////////-+++-/////////////////////////////////////////
+// Grid
+//
+// This is a purely utilitarian grid. Your main site grid structure should be 
+// a custom solution depending on the individual content's needs. 
+// This grid should only be used for small one-off things where you just need an
+// easy grid layout for a specific thing (like a webform or something similar)
+//
+/////////////////////////////////////-+++-/////////////////////////////////////////
+
+
+// default inline grid
+
+$grid-old-gutter: 50px;
+$grid-small-gutter: 20px;
+$mq-grid: $mq-sm;
+
+.grid {
+    @include grid--gutter($mq-grid, $space-4);
+
+    // @include mq($from: $mq-xxs) {
+    //     .col-100-t { width: 100%; }
+    //     .col-75-t { width: 75%; }
+    //     .col-66-t { width: 66.66666666%; }
+    //     .col-50-t { width: 50%; }
+    //     .col-33-t { width: 33.33333333%; }
+    //     .col-25-t { width: 25%; }
+    // }
+
+    // @include mq($from: $mq-xs) {
+    //     .col-100-s { width: 100%; }
+    //     .col-75-s { width: 75%; }
+    //     .col-66-s { width: 66.66666666%; }
+    //     .col-50-s { width: 50%; }
+    //     .col-33-s { width: 33.33333333%; }
+    //     .col-25-s { width: 25%; }
+    // }
+
+    // some default inline grid layouts
+    @include mq($from: $mq-grid) {
+        .col-100 { width: 100%;}
+        .col-75 { width: 75%; }
+        .col-66 { width: 66.66666666%; }
+        .col-50 { width: 50%; }
+        .col-33 { width: 33.33333333%; }
+        .col-25 { width: 25%; }
+    }
+
+    // if its just a single row grid, we want to truncate the bottom margin
+    // on desktop.
+    &--singleRow {
+        margin-bottom: auto;
+        > div,
+        > li {
+            @include mq($from: $mq-grid) {
+                margin-bottom: auto;
+            }
+        }
+    }
+
+    //no gutters
+    &--noGutter {
+        width: 100%;
+        margin-left: 0;
+
+        > div,
+        > li {
+            padding-left: 0;
+        }
+    }
+
+    // same as above except for smaller screens
+    // &--singleRow--s {
+    //     > div:not(:last-child),
+    //     > li:not(:last-child) {
+    //         @include mq($from: $grid-small-bp) {
+    //             margin-bottom: 0;
+    //         }
+    //     }
+    // }
+
+    // &--singleRow--t {
+    //     > div:not(:last-child),
+    //     > li:not(:last-child) {
+    //         @include mq($from: $grid-tiny-bp) {
+    //             margin-bottom: 0;
+    //         }
+    //     }
+    // }
+
+    // &--singleRow--always {
+    //     > div:not(:last-child),
+    //     > li:not(:last-child) {
+    //         margin-bottom: 0;
+    //     }
+    // }
+
+    // this is for situations where we want a certain grid column to be optional.
+    // so when it doesn't exist that remaining column goes full width.
+    // this only works when there is only 2 columns
+    // &--optional {
+    //     display: table;
+
+    //     > div,
+    //     > li {
+    //         display: table-cell;
+    //         vertical-align: top;
+    //     }
+    // }
+
+    // &--wide {
+    //     width: calc(100% + #{$space-4});
+    //     margin-left: -$space-4;
+    //     > div,
+    //     > li {
+    //         padding-left: $space-4;
+    //     }
+    // }
+}
+
+
+// need some css columns? use something like this below
+// css columns
+// .columns-3 {
+//     columns: 3;
+//     column-gap: $space-4;
+// }

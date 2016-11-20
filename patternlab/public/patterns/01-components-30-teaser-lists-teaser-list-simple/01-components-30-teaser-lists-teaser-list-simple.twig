@@ -1,0 +1,13 @@
+<section class="teaser-list-simple">
+
+    <h2 class="teaser-list-simple__title tag text-s2 navy mb-2">{{ post.title }}</h2>
+    <div class="teaser-list-simple__body stack">
+        {% block teasers %}
+            {% for post in post.list %}
+                <div class="">
+                    {% include "components-teaser-tiny" %}
+                </div>
+            {% endfor %}
+        {% endblock %}
+    </div>
+</section>

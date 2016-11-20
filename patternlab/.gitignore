@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+export/*
+vendor/*
+source/styleguide/*
+

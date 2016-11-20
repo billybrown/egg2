@@ -1,0 +1,226 @@
+{
+    "title" : "Home Page",
+    "bodyClass": "home",
+    "homehero" : [
+        {
+            "title" : "Explore the latest <strong>research & approaches</strong> that are innovating our field",
+            "img" : {
+                "src" : "../../images/site/hero_1.png",
+                "alt" : "Doctor with cat"
+            },
+            "content" : {
+                "teaserlist" : [
+                    {
+                        "title" : "Free Cat Adoptions at Edmonton Humane Society",
+                        "tag" : "Case Study",
+                        "tags" : "Case Studies",
+                        "img" : {
+                            "src" : "../../images/site/teaser_small_cat.png",
+                            "alt" : "nothing"
+                        }
+                    },
+                    {
+                        "title" : "Mapping Our Lessons Learned",
+                        "tag" : "Research",
+                        "tags" : "Research",
+                        "img" : {
+                            "src" : "../../images/site/teaser_small_vets.png",
+                            "alt" : "nothing"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "title" : "Get <strong>ideas, tools & support</strong> to help you improve your work",
+            "img" : {
+                "src" : "../../images/site/hero_2.png",
+                "alt" : "Doctor with cat"
+            },
+            "content" : {
+                "intro" : "We have hundreds of free resources to read, download, and apply. Get started with:",
+                "textlist" : [
+                    {
+                        "title" : "Tools & Tips",
+                        "excerpt" : "discover how-tos, guidelines, case studies, and more"
+                    },
+                    {
+                        "title" : "Webinars",
+                        "excerpt" : "explore live and recorded webinars for your professional development"
+                    },
+                    {
+                        "title" : "Experts",
+                        "excerpt" : "get ideas and advice from ASPCApro experts and thought leaders in the animal welfare field"
+                    }
+                ] 
+            }
+        }
+    ],
+    "homemission" : "ASPCApro applies research and provides resources to help animal welfare professionals <strong>save more lives.</strong>",
+    "promo" : {
+        "title" : "JOIN Adoption Ambassadors",
+        "excerpt" : "More than 450 shelters and rescues have signed the pledge. Are you in?",
+        "link" : "Join the campaign",
+        "img": {
+            "src" : "../../images/site/promo_vets.jpg",
+            "alt" : "ASPCApro adoption ambassadors and orange cat"
+        }
+    }, 
+    "webinars" : {
+        "title": "Upcoming Webinars",
+        "list": [
+            {
+                "title": "The ABCs of Rodenticides",
+                "excerpt": "Learn how to recognize the differences between various rodenticides and the effects they have on animals.",
+                "link": "Register",
+                "date": "Thursday, December 6, 2016, 4:00pm–5:00pm (ET)"
+            },
+            {
+                "title": "Introduction to Transport Best Practices",
+                "excerpt": "An overview of the Companion Animal Transport Best Practices document released by the Society of Animal Welfare Administrators.",
+                "link": "Register",
+                "date": "Thursday, December 6, 2016, 4:00pm–5:00pm (ET)",
+                "learnmore" : true
+            }
+        ]
+    }, 
+    "tools" : {
+        "title": "Featured Tools & Tips",
+        "list": [
+            {
+                "title": "Emergency Housing Guide",
+                "excerpt": "Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus mentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vest.",
+                "link": "Download",
+                "guide": true
+            },
+            {
+                "title": "Dog Adoptions with Staying Power",
+                "excerpt": "Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus mentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vest.",
+                "tag": "How-to",
+                "tagclass" : "how-to",
+                "img": {
+                    "src": "../../images/site/card_adoption.png",
+                    "alt": "Dog getting nails cut"
+                }
+            },
+            {
+                "title": "Sample Plans for Evacuation & Sheltering",
+                "excerpt": "Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus mentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vest.",
+                "tag": "Forms & Samples",
+                "tagclass" : "forms-and-samples",
+                "img": {
+                    "src": "../../images/site/card_shelter.png",
+                    "alt": "Cat and vet"
+                }
+            },
+            {
+                "title": "Tip of the Week: Be a Human Billboard",
+                "excerpt": "Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus mentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vest.",
+                "tag": "Tips & FAQs",
+                "tagclass" : "tips-and-faqs",
+                "img": {
+                    "src": "../../images/site/card_billboard.png",
+                    "alt": "Vets and orange cat"
+                }
+            }
+        ]
+    },
+    "grants" : {
+        "title" : "Grant Opportunities",
+        "opportunities": {
+            "title": "Featured",
+            "list": [
+                {
+                    "title" : "Lil BUB’s BIG Fund for the ASPCA",
+                    "deadline" : "September 23, 2016"
+                },
+                {
+                    "title" : "ASPCA-Humane Alliance Spay/Neuter Equipment Grants ",
+                    "deadline" : "November 4, 2016"
+                }
+            ]
+        },
+        "funding": {
+            "title": "Emergency Funding",
+            "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec arcu vitae ex placerat aliquet. Donec malesuada.",
+            "link": "Read the guidelines and apply"
+        },
+        "stat": "More than <strong>$100 million</strong> granted since 2008"
+    },
+    "expertposts" : {
+        "title": "Latest Expert Posts",
+        "list": [
+            {
+                "title": "Black Is Still the New White",
+                "excerpt": "It’s that time of year again. With Halloween around the corner, Dr. Emily Weiss shares the facts about black cats—and what you can be doing to get more adopted.",
+                "tag": "Experts",
+                "tagclass" : "experts",
+                "img": {
+                    "src": "../../images/site/card_cat.png",
+                    "alt": "Cat and vet"
+                }
+            },
+            {
+                "title": "Pleased to Meet You… Or Maybe Not",
+                "excerpt": "Dog introductions—yes or no? Dr. Emily Weiss shares 4 compelling reasons for her recommendation.",
+                "tag": "Experts",
+                "tagclass" : "experts",
+                "img": {
+                    "src": "../../images/site/card_dogs.png",
+                    "alt": "Vets and orange cat"
+                }
+            }
+        ]
+    },
+    "emergency": {
+        "list": [
+            {
+                "title": "Suspect a parvo outbreak?",
+                "excerpt": "Access tools for diagnosing and treating parvovirus, and create a free parvovirus protocol in minutes."
+            },
+            {
+                "title": "Possible poison emergency?",
+                "excerpt": "Learn about common toxins or call our 24-hour diagnostic and treatment hotline at <strong>888-426-4435</strong>."
+            },
+            {
+                "title": "Need to report animal cruelty?",
+                "excerpt": "Find out how to report animal cruelty where you live, and access tools for working on cruelty cases."
+            }
+        ]
+    },
+    "explore": {
+        "title": "Explore ASPCApro Tools and Tips by Topic:",
+        "list": [
+            {
+                "title": "Adoption"
+            },
+            {
+                "title": "Behavior & Enrichment"
+            },
+            {
+                "title": "Cruelty & Disaster Response"
+            },
+            {
+                "title": "Equine Rescues & Sanctuaries"
+            },
+            {
+                "title": "Foster Care"
+            },
+            {
+                "title": "Toxicology & Poison Control"
+            },
+            {
+                "title": "Research & Data"
+            },
+            {
+                "title": "Shelter Health"
+            },
+            {
+                "title": "Shelter Management"
+            },
+            {
+                "title": "Spay/Neuter"
+            }
+        ]
+    }
+}

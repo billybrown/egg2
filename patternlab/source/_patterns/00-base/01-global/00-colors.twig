@@ -1,0 +1,9 @@
+<ul class="list-s">
+    {% for post in colors %}
+        <li class="pl-colors">
+            <div class="pl-color-square bg-{{ post.name }}"></div>
+            <div class="{{ post.name }}">{{ post.name }}</div>
+            <div>{{ post.hex }}</div>
+        </li>
+    {% endfor %}
+</ul>

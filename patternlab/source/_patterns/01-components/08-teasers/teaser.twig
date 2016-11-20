@@ -1,0 +1,37 @@
+<div class="teaser">
+    <a href="#" class="">
+
+          {% block teaser_title %}
+              <h3 class="teaser__title text-link strong text-2 mb-0">{{ post.title }}</h3>
+          {% endblock %}
+
+          {% if post.date %}
+              <p class="teaser__date text-s1 medium navy clock">{{ post.date }}</p>
+          {% endif %}
+
+          {% if post.deadline %}
+            <p class="teaser__deadline navy condensed">
+              <span class="tag text-s2">Deadline:</span> 
+              <span class="text-s1 medium">{{ post.deadline }}</span>
+            </p>
+          {% endif %}
+
+
+          {% if post.excerpt %}
+            {% block teaser_excerpt %}
+              <p class="teaser__excerpt text text-s1 blackborder mb-2">{{ post.excerpt }}</p>
+            {% endblock %}
+          {% endif %}
+
+
+            {% if post.link %}
+          {% block teaser_link %}
+
+            <div class="teaser__link">
+              <a href="" class="button green">{{ post.link }}</a>
+            </div>
+          {% endblock %}
+            {% endif %}
+
+    </a>
+</div><!--/.teaser-->
