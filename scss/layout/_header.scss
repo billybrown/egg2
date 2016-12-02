@@ -22,7 +22,7 @@ $header-top: 172px;
     display: inline-block;
     font-weight: $sans-weight-bold;
     position: absolute;
-    transition: transform $animation;
+    transition: transform $animation-move;
     transform: translatey(-100%);
     z-index: 100;
 

@@ -1,0 +1,17 @@
+{
+    "animations": [
+        {
+            "name" : "Fade",
+            "duration" : "0.2s",
+            "easing" : "ease-out",
+            "class" : "animate-fade"
+        },
+        {
+            "name" : "Movement",
+            "duration" : "0.5s",
+            "easing" : "ease-in-out",
+            "class" : "animate-move",
+            "html" : "<div class='demo-shape'></div>"
+        }
+    ]
+}

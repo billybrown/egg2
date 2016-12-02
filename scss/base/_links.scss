@@ -1,22 +1,24 @@
+$link: goldenrod;
+
 a {
-    //color: $orange;
+    color: $link;
     text-decoration: none;
-    transition: color $animation;
+    transition: color $animation-fade;
 
     &:hover,
     &:focus {
-        //color: $blue;
+        color: darken($link, 10%);
 
         path {
-            //fill: $blue;
+            fill: darken($link, 10%);
         }
     }
 
     path {
-        transition: fill $animation;
+        transition: fill $animation-fade;
     }
 }
 
 ::selection {
-    //background: rgba(231, 111, 0, .4);
+    background: rgba(255, 210, 41, .4);
 }

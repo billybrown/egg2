@@ -6,12 +6,15 @@ $ms-base: 16px;
 $ms-ratio: 1.25;
 $font-steps-up: 6;
 $font-steps-down: 2; 
+$font-steps: 8;
+
 $line-height: 1.6;
 
 
 
 @mixin type($size) {
     font-size: pow($ms-ratio, $size) * 1em;
+    line-height: $line-height - ($size * 0.08);
 }
 
 @mixin type-s($size) {
@@ -22,6 +25,7 @@ $line-height: 1.6;
 @for $i from 0 through $font-steps-up {
     .text-#{$i} {
         font-size: pow($ms-ratio, $i) * 1em;
+        line-height: $line-height - ($i * 0.08);
     }
 }
 // modular scale small
@@ -30,6 +34,8 @@ $line-height: 1.6;
         font-size: 1em / pow($ms-ratio, $i);
     }
 }
+
+
 
 // default text
 @mixin text {
@@ -44,17 +50,9 @@ body {
     @include text; 
 }
 
-
-// line height adjustments @todo - watch this and see if it can be dynamically
-// included into the modular scale styles above
-.text-s2 { line-height: 1.4; }
-
-.text-1 { line-height: 1.2; }
-
-.text-2 { line-height: 1.1; }
-
-.text-3 { line-height: 1.1; }
-
+.cursive {
+    font-family: $cursive;
+}
 
 
 // buttons
@@ -70,7 +68,7 @@ $button-color: tomato;
     text-transform: uppercase;
     border-radius: 5px;
     padding: $space-1 * .85 $space-5 $space-1 * .85 $space-1;
-    transition: background $animation, color $animation;
+    transition: background $animation-fade, color $animation-fade;
 
     &:hover,
     &:focus {
@@ -81,7 +79,7 @@ $button-color: tomato;
 
 .button {
     @include button-defaults;
-    font-size: 1em / pow($ms-ratio, 2);
+    @include type(2);
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
@@ -94,18 +92,17 @@ $button-color: tomato;
 
     &:hover,
     &:focus {
-        //background: lighten($navy, 5%);
         color: $white;
     }
 
     &.transparent {
+        @include type-s(1);
         background: transparent;
         //color: $navy-light;
         text-transform: none;
         letter-spacing: normal;
         padding: 0 $space-3 0 0;
         box-shadow: none;
-        font-size: 1em / pow($ms-ratio, 1);
 
         &:before {
             display: none;
@@ -127,10 +124,10 @@ $button-color: tomato;
 
 .text-link {
     color: black;
-    transition: color $animation;
+    transition: color $animation-fade;
 
     &:hover {
-        //color: $blue;
+        color: tomato;
     }
 }
 
@@ -146,11 +143,19 @@ $button-color: tomato;
 // h5 { @include title-xsm; }
 // h6 { @include title-xxsm; }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     font-weight: $sans-weight-medium;
     margin-top: 0;
     margin-bottom: 0;
+    font-family: $cursive;
 }
+
+h1 { @include type(6); }
+h2 { @include type(5); }
+h3 { @include type(4); }
+h4 { @include type(3); }
+h5 { @include type(2); }
+h6 { @include type(1); }
 
 p {
     margin-top: 0;
@@ -165,11 +170,13 @@ p {
 
 // some utility classes
 b,
-strong {
+strong,
+.strong {
   font-weight: $sans-weight-bold;
 }
 
-.strong { font-weight: $sans-weight-bold; }
+.italic, .italics { font-style: italic; }
+
 .medium { font-weight: $sans-weight-medium; }
 
 .center { text-align: center; }
@@ -191,3 +198,4 @@ strong {
         background-color: $hex;
     }
 }
+

@@ -2,63 +2,56 @@
 // Lists - stacks
 //
 
-.stack {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 
-    > li:not(:last-child),
-    > div:not(:last-child) {
-        margin-bottom: $space-2;
-    }
-}
+$list-steps: 6;
 
-// @for $i from 0 through 8 {
-//     .list-#{$i} {
-//         & > div {
-//             display: inline-block;
-//             vertical-align: top;
-//             &:not(:last-child) {
-//                 margin-right: $ms-space-px * $i;
-//             }
-//         }
-//     }
-// }
 
-.list-s {
+[class^='list-'], 
+[class*=' list-'],
+[class^='stack-'], 
+[class*=' stack-'] {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+
+// Stacks are vertical lists
+
+@for $i from 0 through $list-steps {
+  .stack-#{$i} {
   
-    & > div,
-    & > li {
-       display: inline-block;
-       vertical-align: top;
-       &:not(:last-child) {
-           margin-right: $space-0;
-       }
-    }      
+    > li:not(:last-child),
+    > div:not(:last-child) {
+        margin-bottom: $ms-space-px * $i;
+    }
+  }
 }
 
-.list-m {
-    & > div {
-       display: inline-block;
-       vertical-align: top;
-       &:not(:last-child) {
-           margin-right: $space-4;
-       }
-    }      
+
+// Lists are horizontal or inline lists
+
+[class^='list-'], 
+[class*=' list-'] {
+
+  & > div,
+  & > li {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
-.list-l {
-    & > div {
-       display: inline-block;
-       vertical-align: top;
-       &:not(:last-child) {
-           margin-right: $space-7;
-       }
-    }   
+@for $i from 0 through $list-steps {
+  .list-#{$i} {
+  
+    > li:not(:last-child),
+    > div:not(:last-child) {
+        margin-right: $ms-space-px * $i;
+    }
+  }
 }
+
 
 .pipelist {
     & > h2,

@@ -1,0 +1,24 @@
+{
+    "fonts": [
+        {
+            "name" : "Body Font",
+            "font" : "Source Sans Pro, sans-serif",
+            "class" : ""
+        },
+        {
+            "name" : "Body Font Italic",
+            "font" : "Source Sans Pro, sans-serif",
+            "class" : "italic"
+        },
+        {
+            "name" : "Body Font Bold",
+            "font" : "Source Sans Pro, sans-serif",
+            "class" : "strong"
+        },
+        {
+            "name" : "Heading Font",
+            "font" : "Knewave, cursive",
+            "class" : "cursive"
+        }
+    ]
+}

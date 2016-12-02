@@ -13,7 +13,7 @@ $placeholder-default: $navy;
     height: 42px; // need to put height here for firefox
     box-shadow: none;
     border: 1px solid $gray;
-    transition: background $animation, border $animation, box-shadow $animation;
+    transition: background $animation-fade, border $animation-fade, box-shadow $animation-fade;
 
     &:focus {
         outline: none;
@@ -61,7 +61,7 @@ $submit-color: tomato;
 input[type="submit"] {
   border-color: $submit-color;
   width: auto;
-  transition: border $animation, background $animation;
+  transition: border $animation-fade, background $animation-fade;
 
   &:hover,
   &:focus {
@@ -133,7 +133,7 @@ select[multiple]{
     transition: top .5s ease;
 
     path {
-      transition: fill $animation;
+      transition: fill $animation-fade;
     }
 
     &:hover,

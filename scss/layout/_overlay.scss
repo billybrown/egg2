@@ -42,7 +42,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: translatey(-1em);
-        transition: transform .4s ease;
+        transition: transform $animation-move;
         padding: 1.8em * 2 1.8em;
         max-width: 430px;
 
@@ -78,7 +78,7 @@
         }
 
         path {
-            transition: fill $animation;
+            transition: fill $animation-fade;
         }
 
         &:hover,

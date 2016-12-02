@@ -51,6 +51,10 @@
     border-top: 1px solid $gray;
 }
 
+.sg-subtype > h2 {
+    display: none;
+}
+
 
 .pl-color-square {
     width: 120px;
@@ -63,4 +67,30 @@
 
 .pl-colors {
     @include type-s(1);
+}
+
+.animate-fade {
+    transition: opacity $animation-fade;
+
+    &:hover {
+        opacity: .1;
+    }
+}
+
+.demo-shape {
+    width: 30px;
+    height: 30px;
+    background: $black;
+}
+
+.animate-move {
+
+    .demo-shape {
+        position: relative;
+        transition: margin $animation-move;
+    }
+    
+    &:hover .demo-shape {
+        margin-left: 200px;
+    }
 }
